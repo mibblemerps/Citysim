@@ -7,6 +7,7 @@ using Citysim.Map;
 using Citysim.Views;
 using Citysim.Map.Tiles;
 using Citysim.Map.Generators;
+using Dongs.Suckable;
 
 namespace Citysim
 {
@@ -16,6 +17,13 @@ namespace Citysim
     public class Citysim : Game
     {
         public const string VERSION = "0.0.1+alpha";
+        public Dong dong = new Dong();
+        
+        if(dong.sucked) {
+            Console.WriteLine("dong sucked");
+        } else {
+            Console.WriteLine("dong not sucked");
+        }
 
         public static Citysim instance;
 
